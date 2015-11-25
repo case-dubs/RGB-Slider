@@ -35,6 +35,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "openColor"){
+            let newViewController = segue.destinationViewController
+            newViewController.view.backgroundColor = colorOutputBox.backgroundColor
+        }
+    }
+    
     func updateColorLabels(red: Float, blue: Float, green: Float){
         redLabel.text = String(Int(red))
         blueLabel.text = String(Int(blue))
