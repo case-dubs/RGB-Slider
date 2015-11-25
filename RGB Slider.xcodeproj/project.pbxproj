@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					E4C352791BF7E22200CD76F1 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 8VJXU4XR84;
 					};
 					E4C3528D1BF7E22200CD76F1 = {
 						CreatedOnToolsVersion = 7.1;
@@ -397,10 +398,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "RGB Slider/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.caseywilson.RGB-Slider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -408,10 +412,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "RGB Slider/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.caseywilson.RGB-Slider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -482,6 +489,7 @@
 				E4C352A41BF7E22200CD76F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4C352A51BF7E22200CD76F1 /* Build configuration list for PBXNativeTarget "RGB SliderTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +498,7 @@
 				E4C352A71BF7E22200CD76F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4C352A81BF7E22200CD76F1 /* Build configuration list for PBXNativeTarget "RGB SliderUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,9 +507,9 @@
 				E4C352AA1BF7E22200CD76F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
 	rootObject = E4C352721BF7E22200CD76F1 /* Project object */;
 }
-//
