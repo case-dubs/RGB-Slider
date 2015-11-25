@@ -24,7 +24,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: CGFloat(186)/255, green: CGFloat(221)/255, blue: CGFloat(188)/255, alpha: 1.0)
+        colorOutputBox.backgroundColor = UIColor(red: CGFloat(186)/255, green: CGFloat(221)/255, blue: CGFloat(188)/255, alpha: 1.0)
+        colorOutputBox.layer.borderColor = UIColor.blackColor().CGColor
+        colorOutputBox.layer.borderWidth = 1
         // Do any additional setup after loading the view, typically from a nib.
     }
 

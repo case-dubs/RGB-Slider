@@ -87,6 +87,13 @@
                                 <rect key="frame" x="128" y="114" width="65" height="65"/>
                                 <color key="backgroundColor" red="0.72941176470588232" green="0.8666666666666667" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XD-wM-CoU">
+                                <rect key="frame" x="140" y="430" width="41" height="30"/>
+                                <state key="normal" title="OPEN"/>
+                                <connections>
+                                    <segue destination="Pdd-Zk-Ha9" kind="show" id="X4y-KK-xwv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -105,6 +112,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="178"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JDY-rm-Fah">
+            <objects>
+                <viewController id="Pdd-Zk-Ha9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A3r-Fs-9bc"/>
+                        <viewControllerLayoutGuide type="bottom" id="83S-xf-Vyi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ugh-RV-gWb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64n-9e-Frj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="178"/>
         </scene>
     </scenes>
 </document>
