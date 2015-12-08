@@ -19,15 +19,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var blueLabel: UILabel!
     @IBOutlet weak var colorOutputBox: UIView!
     
-    
     //MARK: Functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        colorOutputBox.backgroundColor = UIColor(red: CGFloat(186)/255, green: CGFloat(221)/255, blue: CGFloat(188)/255, alpha: 1.0)
-        colorOutputBox.layer.borderColor = UIColor.blackColor().CGColor
-        colorOutputBox.layer.borderWidth = 1
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let defaults = NSUserDefaults.standardUserDefaults()
+        redSelection.value = defaults.floatForKey("red")
+        greenSelection.value = defaults.floatForKey("green")
+        blueSelection.value = defaults.floatForKey("blue")
+        redLabel.text = String(Int(defaults.floatForKey("red")))
+        blueLabel.text = String(Int(defaults.floatForKey("blue")))
+        greenLabel.text = String(Int( defaults.floatForKey("green")))
+        colorOutputBox.backgroundColor = UIColor(red: CGFloat(defaults.floatForKey("red")/250), green: CGFloat(defaults.floatForKey("green")/250), blue: CGFloat(defaults.floatForKey("blue")/250), alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,11 +52,14 @@ class ViewController: UIViewController {
         greenLabel.text = String(Int(green))
     }
     @IBAction func updateBackgroundColor(sender: AnyObject) {
-        let red = redSelection.value
-        let green = greenSelection.value
-        let blue = blueSelection.value
-        colorOutputBox.backgroundColor = UIColor(red: CGFloat(red)/255, green: CGFloat(green)/255, blue: CGFloat(blue)/255, alpha: 1.0)
-        updateColorLabels(red, blue: blue, green: green)
+        let defaults = NSUserDefaults.standardUserDefaults()  //1
+        defaults.setFloat(redSelection.value, forKey: "red")   //2
+        defaults.setFloat(greenSelection.value, forKey: "green")
+        defaults.setFloat(blueSelection.value, forKey: "blue")
+        defaults.synchronize()
+        colorOutputBox.backgroundColor = UIColor(red: CGFloat(defaults.floatForKey("red")/250), green: CGFloat(defaults.floatForKey("green")/250), blue: CGFloat(defaults.floatForKey("blue")/250), alpha: 1.0)
+        updateColorLabels(defaults.floatForKey("red"), blue: defaults.floatForKey("blue"), green: defaults.floatForKey("green"))
+        
     }
     
 
